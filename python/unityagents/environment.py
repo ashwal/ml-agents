@@ -30,7 +30,8 @@ class UnityEnvironment(object):
         :int base_port: Baseline port number to connect to Unity environment over. worker_id increments over this.
         :int worker_id: Number to add to communication port (5005) [0]. Used for asynchronous agent scenarios.
         """
-
+        print("WORKER ID: ")
+        print(worker_id)
         atexit.register(self.close)
         self.port = base_port + worker_id
         self._buffer_size = 120000
